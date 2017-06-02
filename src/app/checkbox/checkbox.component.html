@@ -1,0 +1,7 @@
+<div *ngIf="data && data.controlType==='checkbox'">
+  <!--<small>Control Type: {{data.controlType}}</small>-->
+  <h3>{{data.label}}</h3>
+  <md-checkbox class="margin-right" *ngFor="let type of data.options" [value]="type.id">
+    {{type.label}}
+  </md-checkbox>
+</div>

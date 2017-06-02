@@ -1,0 +1,16 @@
+<md-toolbar color="primary">
+  <md-icon>verified_user</md-icon>
+  <span *ngIf="myCustomer">{{myCustomer.name}}</span>
+  <span class="spacer"></span>
+  <button md-button [mdMenuTriggerFor]="appMenu"><md-icon>language</md-icon> Language</button>
+</md-toolbar>
+
+<md-menu #appMenu="mdMenu">
+  <span *ngIf="myCustomer">
+  <button md-menu-item *ngFor="let data of myCustomer.language.options" (click)="changeLanguage(data.id)">{{data.label}} </button>
+  </span>
+  <!--<button md-menu-item> Settings </button>
+  <button md-menu-item> Help </button>-->
+</md-menu>
+<ns-survey [settings]="{mode:'onebyone'}"> </ns-survey>
+<ns-survey [settings]="{mode:'multiple'}"> </ns-survey>

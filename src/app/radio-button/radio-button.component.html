@@ -1,0 +1,10 @@
+<div *ngIf="data && data.controlType==='radio-button'">
+<!--<small>Control Type: {{data.controlType}}</small>-->
+<h3>{{data.label}}</h3>
+<md-radio-group [(ngModel)]="selectedItem">
+  <md-radio-button class="margin-right" *ngFor="let type of data.options" [value]="type.id">
+    {{type.label}}
+  </md-radio-button>
+</md-radio-group>
+<!--<small>Selected = {{selectedItem}}</small>-->
+</div>

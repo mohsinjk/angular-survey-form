@@ -1,0 +1,6 @@
+<div *ngIf="data && data.controlType==='slider'">
+  <h3>{{data.label}}</h3>
+  <md-slider class="slider-width" [disabled]="disabled" [invert]="invert" [max]="max" [min]="min" [step]="step" [thumb-label]="thumbLabel"
+    [tick-interval]="tickInterval" [value]="value" [vertical]="vertical">
+  </md-slider>
+</div>

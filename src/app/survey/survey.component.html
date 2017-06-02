@@ -1,0 +1,32 @@
+<div *ngIf="mySurvey && settings.mode=='onebyone'">
+  <md-card class="card-bottom-margin">
+    <md-card-content class="card-content-height">
+      <h1 align="middle" *ngIf="!selectedItem && !disableButton">{{mySurvey.welcomeMessage}}</h1>
+      <h1 align="middle" *ngIf="!selectedItem && disableButton">{{mySurvey.finishMessage}}</h1>
+      <ns-textbox [data]="selectedItem"> </ns-textbox>
+      <ns-dropdown [data]="selectedItem"> </ns-dropdown>
+      <ns-checkbox [data]="selectedItem"> </ns-checkbox>
+      <ns-radio-button [data]="selectedItem"> </ns-radio-button>
+      <ns-slider [data]="selectedItem"> </ns-slider>
+      <ns-textarea [data]="selectedItem"> </ns-textarea>
+    </md-card-content>
+    <md-card-actions align="middle">
+      <button md-raised-button color="accent" [disabled]="disableButton" (click)="next()">Next</button>
+    </md-card-actions>
+  </md-card>
+</div>
+
+<div *ngIf="mySurvey && settings.mode=='multiple'">
+  <md-card class="card-bottom-margin" *ngFor="let data of mySurvey.questions">
+    <ns-textbox [data]="data"> </ns-textbox>
+    <ns-dropdown [data]="data"> </ns-dropdown>
+    <ns-checkbox [data]="data"> </ns-checkbox>
+    <ns-radio-button [data]="data"> </ns-radio-button>
+    <ns-slider [data]="data"> </ns-slider>
+    <ns-textarea [data]="data"> </ns-textarea>
+  </md-card>
+  <h1 align="middle" *ngIf="finished">{{mySurvey.finishMessage}}</h1>
+  <md-card-actions align="middle">
+    <button md-raised-button color="accent" [disabled]="disableButton" (click)="finish()">Finish</button>
+  </md-card-actions>
+</div>

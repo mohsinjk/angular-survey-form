@@ -1,0 +1,69 @@
+{
+  "welcomeMessage": "Welcome to 2017 survey",
+  "finishMessage": "Thanks",
+  "questions": [
+    {
+      "id": "1203",
+      "label": "What is your name?",
+      "controlType": "textbox",
+      "options": []
+    },
+    {
+      "id": "1207",
+      "label": "How do you feel today at the office?",
+      "controlType": "slider",
+      "options": []
+    },
+    {
+      "id": "1234",
+      "label": "What is your gender?",
+      "controlType": "select",
+      "options": [
+        {
+          "id": "male",
+          "label": "Male"
+        },
+        {
+          "id": "female",
+          "label": "Female"
+        }
+      ]
+    },
+    {
+      "id": "1234",
+      "label": "What is your gender?",
+      "controlType": "radio-button",
+      "options": [
+        {
+          "id": "male",
+          "label": "Male"
+        },
+        {
+          "id": "female",
+          "label": "Female"
+        }
+      ]
+    },
+    {
+      "id": "1237",
+      "label": "Which foods do you enjoy?",
+      "controlType": "checkbox",
+      "options": [
+        {
+          "id": "12",
+          "label": "Indian Food"
+        },
+        {
+          "id": "13",
+          "label": "Chinese Food"
+        }
+      ]
+    },
+    {
+      "id": "1209",
+      "label": "Tell about your work",
+      "controlType": "textarea",
+      "options": []
+    }
+  ]
+}

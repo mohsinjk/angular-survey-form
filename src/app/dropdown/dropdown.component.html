@@ -1,0 +1,8 @@
+<div *ngIf="data && data.controlType==='select'">
+  <!--<small>Control Type: {{data.controlType}}</small>-->
+  <br>
+  <md-select placeholder="{{data.label}}" [(ngModel)]="selectedItem">
+    <md-option *ngFor="let type of data.options" [value]="type.id">{{ type.label }}</md-option>
+  </md-select>
+  <!--<small>Selected = {{selectedItem}}</small>-->
+</div>
